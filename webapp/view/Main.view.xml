@@ -1,0 +1,32 @@
+<mvc:View controllerName="fabio.palombi.MyProject.controller.Main" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout">
+
+	<Page title="{i18n>appTitle}" id="page" titleAlignment="Center">
+		<content>
+			<Button id="BadgedButton" class="sapUiTinyMarginBeginEnd" icon="sap-icon://cart" type="Emphasized" text="{i18n>btnText2}" press="onOpenCart">
+				<customData>
+					<BadgeCustomData key="badge" value="" />
+				</customData>
+			</Button>
+		</content>
+		<Table id="DialogList" items="{product>/Products}" headerText="{i18n>productListTitle}" growing="true" growingScrollToLoad="false" alternateRowColors="true" growingThreshold="14">
+            <columns>
+            <Column>
+                <Text text="Name" />
+            </Column>
+            <Column>
+                <Text text="Price" />
+            </Column>
+            <Column width="5%">
+            </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onDetail">
+                    <Text text="{product>ProductName}" />
+                    <Text text="€ {product>Price}" />
+                    <Button class="sapUiTinyMarginBeginEnd" icon="sap-icon://cart" type="Emphasized" press="onOpenDialog"></Button>
+                </ColumnListItem>
+            </items>
+        </Table>
+	</Page>
+
+</mvc:View>

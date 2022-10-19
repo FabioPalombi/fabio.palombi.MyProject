@@ -1,0 +1,54 @@
+{
+    "Products": [
+      {
+        "ID": 1,
+        "ProductName": "TV Samsung LED",
+        "Price": 149.99
+      },
+      {
+        "ID": 2,
+        "ProductName": "Iphone 13 Pro",
+        "Price": 999.99
+      },
+      {
+        "ID": 3,
+        "ProductName": "PS4 Pro 1TB",
+        "Price": 199.99
+      },
+      {
+        "ID": 4,
+        "ProductName": "Notebook HP Omen",
+        "Price": 899.99
+      },
+      {
+        "ID": 5,
+        "ProductName": "IPAD Pro",
+        "Price": 459.99
+      },
+      {
+        "ID": 6,
+        "ProductName": "TV Samsung LED",
+        "Price": 149.99
+      },
+      {
+        "ID": 7,
+        "ProductName": "Iphone 13 Pro",
+        "Price": 999.99
+      },
+      {
+        "ID": 8,
+        "ProductName": "PS4 Pro 1TB",
+        "Price": 199.99
+      },
+      {
+        "ID": 9,
+        "ProductName": "Notebook HP Omen",
+        "Price": 899.99
+      },
+      {
+        "ID": 10,
+        "ProductName": "IPAD Pro",
+        "Price": 459.99
+      }
+    ]
+  }
