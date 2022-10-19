@@ -1,8 +1,0 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-    <Dialog id="chooseQuantity" title="Choose quantity">
-        <StepInput id="CurrentValue" value="{/badgeCurrent}" width="130px" />
-        <beginButton>
-            <Button text="{i18n>dialogCloseButtonText}" press="onCloseDialog" />
-        </beginButton>
-    </Dialog>
-</core:FragmentDefinition>

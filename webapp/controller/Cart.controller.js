@@ -10,9 +10,7 @@ sap.ui.define(
         },
 
         onRouteMatched: function(oEvent){
-          const productID = oEvent.getParameter("arguments").productID; // Get id parameter from routing
-        //this.setData(id); // Send id parameter to setData() fn
-        alert(productID);
+
         }
       });
     }

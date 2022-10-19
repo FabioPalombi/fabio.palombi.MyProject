@@ -4,7 +4,7 @@ sap.ui.define(
     "sap/m/MessageBox",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/odata/v2/ODataModel",
-    "sap/ui/core/Fragment",
+    "sap/ui/core/Fragment"
   ],
   function (BaseController, MessageBox, JSONModel, Fragment) {
     "use strict";
@@ -13,7 +13,7 @@ sap.ui.define(
       onInit: function () {
         this.oModel = new JSONModel();
         this.oModel.setData({
-          badgeCurrent: 1,
+          badgeCurrent: 1
         });
         this.getView().setModel(this.oModel);
 
@@ -28,7 +28,7 @@ sap.ui.define(
         // create dialog lazily
         if (!this.pDialog) {
           this.pDialog = this.loadFragment({
-            name: "fabio.palombi.MyProject.view.ChooseQuantity",
+            name: "fabio.palombi.MyProject.view.ChooseQuantity"
           });
         }
         this.pDialog.then(function (oDialog) {
@@ -86,20 +86,25 @@ sap.ui.define(
       },
 
       onDetail: function (oEvent) {
-        const productID = oEvent
-          .getSource()
-          .getBindingContext("product")
-          .getObject().ID;
+        var items = [];
+        const selected = this.byId("DialogList").getSelectedItems();
+
+        for (let i = 0; i < selected.length; i++) {
+          var item = this.byId("DialogList").getSelectedItems()[i].getBindingContext("product").getObject();
+          item.Quantity = 1;
+          items.push(item);
+        }
+
+        var data = new JSONModel(items);
+        this.getView().getParent().getParent().setModel(data, "cart");
 
         var oRouter = this.getOwnerComponent().getRouter();
-        oRouter.navTo("cart", {
-          //productID: productID,
-        });
+        oRouter.navTo("cart");
       },
 
       sayHello: function () {
         MessageBox.show("Hello World!");
-      },
+      }
     });
   }
 );

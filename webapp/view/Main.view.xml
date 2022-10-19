@@ -8,7 +8,7 @@
 				</customData>
 			</Button>
 		</content>
-		<Table id="DialogList" items="{product>/Products}" headerText="{i18n>productListTitle}" growing="true" growingScrollToLoad="false" alternateRowColors="true" growingThreshold="14">
+		<Table id="DialogList" items="{product>/Products}" headerText="{i18n>productListTitle}" mode="MultiSelect" growing="true" growingScrollToLoad="false" alternateRowColors="true" growingThreshold="14">
             <columns>
             <Column>
                 <Text text="Name" />

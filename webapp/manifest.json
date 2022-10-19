@@ -75,7 +75,7 @@
           "target": "main"
         },
         {
-          "pattern": "product={productID}",
+          "pattern": "cart",
           "name": "cart",
           "target": "cart"
         }
